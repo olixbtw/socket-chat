@@ -1,9 +1,9 @@
 {
   "host": "http://localhost",
   "port": {
-    "server": "5000",
+    "server": "5005",
     "client": "5500"
   },
-  "serverDir": "/server",
-  "appDir": "/app"
+  "serverDir": "server",
+  "appDir": "app"
 }

@@ -1,0 +1,80 @@
+$gap: 10px;
+.main_header {
+  text-align: center;
+}
+.chat_window {
+  background: white;
+  align-self: stretch;
+  flex-grow: 1;
+  height: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding: $gap 0;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    background: white;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: $gap * 3;
+    left: 0;
+    z-index: 10;
+  }
+  &::before {
+    top: $gap;
+    background: linear-gradient(180deg, white 10%, rgba(255, 255, 255, 0) 90%);
+  }
+  &::after {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 90%);
+    bottom: $gap;
+  }
+  .scroller {
+    overflow-y: scroll;
+    padding: $gap * 2 $gap * 5;
+    width: calc(100% + 30px);
+    transform: translateX(-15px);
+    max-height: 100%;
+  }
+
+  .message {
+    margin: 0 0 $gap * 2;
+    width: 80%;
+    b {
+      color: $col2;
+      display: block;
+    }
+    &__user {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.chat_prompt {
+  color: $col3;
+  line-height: 2.5em;
+  transform: translateY(0.5em);
+}
+
+.chat_bottom {
+  order: 100;
+  margin-top: auto;
+  margin-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  &--item {
+    margin-top: $gap;
+    padding: $gap;
+  }
+  margin-bottom: $gap * 3;
+}

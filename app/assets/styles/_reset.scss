@@ -9,10 +9,21 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: $col1;
+  font-size: 18px;
 }
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.25em;
+  margin-bottom: 1em;
 }

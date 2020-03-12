@@ -7,6 +7,7 @@ app.use(cors())
 
 //create server and serve frontend part
 app.use('/', express.static(settings.appDir))
+app.use('/server', express.static(settings.serverDir))
 
 const server = app.listen(settings.port.server, () =>
   console.log(`server started at port - ${settings.port.server}`)
@@ -14,8 +15,8 @@ const server = app.listen(settings.port.server, () =>
 
 //socket connection
 let io = socket(server);
-let socketHandle = require('./socket');
-io.on('connection', socketHandle(io))
+// let socketHandle = ;
+io.on('connect', require('./socket')(io))
 
 //example for requests (for authorisation later)
 app.use('/api', require('./routes/users'))
