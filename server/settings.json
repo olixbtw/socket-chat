@@ -1,7 +1,7 @@
 {
   "host": "http://localhost",
   "port": {
-    "server": "5005",
+    "server": "5000",
     "client": "5500"
   },
   "serverDir": "server",

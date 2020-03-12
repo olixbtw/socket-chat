@@ -18,7 +18,3 @@ let io = socket(server);
 // let socketHandle = ;
 io.on('connect', require('./socket')(io))
 
-//example for requests (for authorisation later)
-app.use('/api', require('./routes/users'))
-
-
